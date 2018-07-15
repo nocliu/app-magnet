@@ -12,6 +12,7 @@
 		6FD201F020FB814500235D06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD201EE20FB814500235D06 /* Main.storyboard */; };
 		6FD201F220FB814600235D06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD201F120FB814600235D06 /* Assets.xcassets */; };
 		6FD201F520FB814600235D06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD201F320FB814600235D06 /* LaunchScreen.storyboard */; };
+		DC8DF8280FCE95D3D6A486F9 /* Pods_Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838CE34F2F042D5367FD77F7 /* Pods_Magnet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		6FD201F120FB814600235D06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FD201F420FB814600235D06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FD201F620FB814700235D06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		838CE34F2F042D5367FD77F7 /* Pods_Magnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B39F13FD91EB77CFE31388C8 /* Pods-Magnet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magnet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Magnet/Pods-Magnet.release.xcconfig"; sourceTree = "<group>"; };
+		C54FA2E4C4330DAB562F53B1 /* Pods-Magnet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magnet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Magnet/Pods-Magnet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8DF8280FCE95D3D6A486F9 /* Pods_Magnet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C1B13EE11ADE1DE3C3F351C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				838CE34F2F042D5367FD77F7 /* Pods_Magnet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6FD201DE20FB814500235D06 = {
 			isa = PBXGroup;
 			children = (
 				6FD201E920FB814500235D06 /* Magnet */,
 				6FD201E820FB814500235D06 /* Products */,
+				F8E2ACD01E7A1C4F1F2F94B8 /* Pods */,
+				2C1B13EE11ADE1DE3C3F351C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = Magnet;
 			sourceTree = "<group>";
 		};
+		F8E2ACD01E7A1C4F1F2F94B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C54FA2E4C4330DAB562F53B1 /* Pods-Magnet.debug.xcconfig */,
+				B39F13FD91EB77CFE31388C8 /* Pods-Magnet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FD201F920FB814700235D06 /* Build configuration list for PBXNativeTarget "Magnet" */;
 			buildPhases = (
+				B37C908DFB59D04A382EFFD8 /* [CP] Check Pods Manifest.lock */,
 				6FD201E320FB814500235D06 /* Sources */,
 				6FD201E420FB814500235D06 /* Frameworks */,
 				6FD201E520FB814500235D06 /* Resources */,
+				E239A7290F151ABFA9EE6EDA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B37C908DFB59D04A382EFFD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Magnet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E239A7290F151ABFA9EE6EDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Magnet/Pods-Magnet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Magnet/Pods-Magnet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6FD201E320FB814500235D06 /* Sources */ = {
@@ -278,6 +349,7 @@
 		};
 		6FD201FA20FB814700235D06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54FA2E4C4330DAB562F53B1 /* Pods-Magnet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,12 +361,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.concon.Magnet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		6FD201FB20FB814700235D06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B39F13FD91EB77CFE31388C8 /* Pods-Magnet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.concon.Magnet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

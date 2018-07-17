@@ -16,13 +16,13 @@ class BinderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabs = createArray()
+        tabs = createTabArray()
         
         tableView.delegate = self
         tableView.dataSource = self
     }
     
-    func createArray() -> [Tab] {
+    func createTabArray() -> [Tab] {
         var tempTabs: [Tab] = []
         
         let tab1 = Tab(title: "1st period")
@@ -32,9 +32,20 @@ class BinderVC: UIViewController {
         let tab3 = Tab(title: "3rd period")
         tempTabs.append(tab3)
         
+        let newTab = Tab(title: "+ New Tab")
+        tempTabs.append(newTab)
+        
         return tempTabs
     }
+    
+    func createNewTab(tabLabel: String) {
+        let newTab = Tab(title: tabLabel)
+        tabs.insert(newTab, at: tabs.count-2)
+    }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 extension BinderVC: UITableViewDataSource, UITableViewDelegate {

@@ -10,11 +10,21 @@ import UIKit
 
 class TabCell: UITableViewCell {
 
-    @IBOutlet weak var tabTitle: UILabel!
+    @IBOutlet weak var tabButton: UIButton!
+    @IBOutlet weak var tabLabel: UILabel!
     
     func setTab(tab: Tab) {
-        tabTitle.text = tab.title
-        tabTitle.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+        tabLabel.text = tab.title
+        tabLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+        tabButton.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
     }
 
+    @IBAction func tabButtonPressed(_ sender: Any) {
+        print("\(whichTabButton(tabText: tabLabel.text!))")
+    }
+    
+    func whichTabButton(tabText: String) -> String {
+        return tabLabel.text!
+    }
+    
 }

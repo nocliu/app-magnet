@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F0DC6C8210D4A3F00DB786B /* NewTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0DC6C6210D4A3F00DB786B /* NewTabVC.swift */; };
+		6F0DC6C9210D4A3F00DB786B /* NewTabVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DC6C7210D4A3F00DB786B /* NewTabVC.xib */; };
 		6FD201EB20FB814500235D06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD201EA20FB814500235D06 /* AppDelegate.swift */; };
 		6FD201F020FB814500235D06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD201EE20FB814500235D06 /* Main.storyboard */; };
 		6FD201F220FB814600235D06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD201F120FB814600235D06 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F0DC6C6210D4A3F00DB786B /* NewTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTabVC.swift; sourceTree = "<group>"; };
+		6F0DC6C7210D4A3F00DB786B /* NewTabVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTabVC.xib; sourceTree = "<group>"; };
 		6FD201E720FB814500235D06 /* Magnet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magnet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD201EA20FB814500235D06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FD201EF20FB814500235D06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +66,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6F0DC6CA210D4A4700DB786B /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				6F0DC6C7210D4A3F00DB786B /* NewTabVC.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		6FD201DE20FB814500235D06 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +98,7 @@
 				6FD201FD20FB85A800235D06 /* Model */,
 				6FD201FE20FB85AD00235D06 /* View */,
 				6FD201FF20FB85B200235D06 /* Controller */,
+				6F0DC6CA210D4A4700DB786B /* XIBs */,
 				6FD201FC20FB859E00235D06 /* Supporting Files */,
 				6FD201F620FB814700235D06 /* Info.plist */,
 			);
@@ -126,6 +139,7 @@
 				6FD201EA20FB814500235D06 /* AppDelegate.swift */,
 				6FD2021920FBC1C300235D06 /* MenuVC.swift */,
 				6FD2021120FBABD000235D06 /* BinderVC.swift */,
+				6F0DC6C6210D4A3F00DB786B /* NewTabVC.swift */,
 				6FD2021B20FBFE1000235D06 /* ToDoVC.swift */,
 				6FD2021D20FBFE2000235D06 /* CalendarVC.swift */,
 			);
@@ -214,6 +228,7 @@
 				6FD201F520FB814600235D06 /* LaunchScreen.storyboard in Resources */,
 				6FD201F220FB814600235D06 /* Assets.xcassets in Resources */,
 				6FD201F020FB814500235D06 /* Main.storyboard in Resources */,
+				6F0DC6C9210D4A3F00DB786B /* NewTabVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FD2021220FBABD000235D06 /* BinderVC.swift in Sources */,
+				6F0DC6C8210D4A3F00DB786B /* NewTabVC.swift in Sources */,
 				6FD201EB20FB814500235D06 /* AppDelegate.swift in Sources */,
 				6FD2021620FBB65F00235D06 /* TabCell.swift in Sources */,
 				6FD2020320FB863000235D06 /* SWRevealViewController.m in Sources */,
@@ -423,7 +439,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6W9SYRNA76;
 				INFOPLIST_FILE = Magnet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +462,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6W9SYRNA76;
 				INFOPLIST_FILE = Magnet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

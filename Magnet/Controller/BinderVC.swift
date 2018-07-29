@@ -10,16 +10,20 @@ import UIKit
 
 class BinderVC: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tabTable: UITableView!
+    @IBOutlet weak var newTabButton: UIButton!
     
     var tabs: [Tab] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        newTabButton.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+        
         tabs = createTabArray()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        tabTable.delegate = self
+        tabTable.dataSource = self
     }
     
     func createTabArray() -> [Tab] {
@@ -31,16 +35,19 @@ class BinderVC: UIViewController {
         tempTabs.append(tab2)
         let tab3 = Tab(title: "3rd period")
         tempTabs.append(tab3)
-        
-        let newTab = Tab(title: "+ New Tab")
-        tempTabs.append(newTab)
+        let tab4 = Tab(title: "4th period")
+        tempTabs.append(tab4)
         
         return tempTabs
     }
     
+    @IBAction func newTabButtonPressed(_ sender: Any) {
+    }
+    
     func createNewTab(tabLabel: String) {
-        let newTab = Tab(title: tabLabel)
-        tabs.insert(newTab, at: tabs.count-2)
+//        let newTab = Tab(title: tabLabel)
+//        tabs.insert(newTab, at: tabs.count-1)
+        
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
